@@ -47,6 +47,6 @@ public class DeliveryCost {
         //adding the price to the total , which is total cost of delivery
         total += price;
 
-        return price;
+        return total;
     }
 }

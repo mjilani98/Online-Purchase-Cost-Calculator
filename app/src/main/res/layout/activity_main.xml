@@ -37,7 +37,8 @@
                 android:background="@color/brown_earth"
                 android:hint="Enter price"
                 android:textAlignment="center"
-                android:textSize="25dp"/>
+                android:textSize="25dp"
+                android:inputType="numberDecimal"/>
 
         </LinearLayout>
 
@@ -127,7 +128,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/mainLinearLayout"
