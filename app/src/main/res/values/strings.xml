@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HW2 Q2</string>
+
+    <string-array name="delivery_array">
+        <item>Next day</item>
+        <item>Second day</item>
+        <item>Normal</item>
+    </string-array>
+
 </resources>

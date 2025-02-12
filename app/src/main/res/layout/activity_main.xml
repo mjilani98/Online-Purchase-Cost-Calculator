@@ -1,19 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/tan"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/tan"
+        android:orientation="vertical">
+
+
+        <!--Price-->
+        <LinearLayout
+            style="@style/linearLayoutStyle"
+            >
+
+            <TextView
+                android:id="@+id/txtViewPrice"
+                style="@style/txtViewStyle"
+                android:text="Price"
+                />
+
+            <EditText
+                android:id="@+id/priceInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/brown_earth"
+                android:hint="Enter price"
+                android:textAlignment="center"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+        <!--Warranty-->
+        <LinearLayout
+            style="@style/linearLayoutStyle"
+            >
+
+            <TextView
+                android:id="@+id/txtViewWarranty"
+                style="@style/txtViewStyle"
+                android:text="Warranty"
+                />
+
+            <ToggleButton
+                android:id="@+id/toggleBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/brown_earth"
+                android:textOff="NO"
+                android:textOn="YES"
+                />
+        </LinearLayout>
+
+        <!--Insurance-->
+        <LinearLayout
+            style="@style/linearLayoutStyle"
+            >
+
+            <TextView
+                android:id="@+id/txtViewInsurance"
+                style="@style/txtViewStyle"
+                android:text="Insurance"
+                />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="false"
+                android:background="@color/brown_earth"
+                />
+        </LinearLayout>
+
+        <!--delivery-->
+        <LinearLayout
+            style="@style/linearLayoutStyle">
+
+            <TextView
+                android:id="@+id/txtViewDelivery"
+                style="@style/txtViewStyle"
+                android:text="Delivery"
+                />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:entries="@array/delivery_array"
+                android:background="@color/brown_earth"
+                />
+
+        </LinearLayout>
+
+        <!--Cost-->
+        <LinearLayout
+            style="@style/linearLayoutStyle">
+
+            <TextView
+                android:id="@+id/txtViewCost"
+                style="@style/txtViewStyle"
+                android:text="Cost"
+                />
+            <TextView
+                android:id="@+id/txtViewCostOutput"
+                style="@style/txtViewStyle"
+                android:hint="0.0"
+                android:background="@color/brown_earth"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/mainLinearLayout"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="Calculate"
+        android:textSize="25dp"
+        android:backgroundTint="@color/rust"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
